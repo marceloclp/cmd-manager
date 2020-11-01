@@ -67,7 +67,7 @@ export class CommandManager {
      * @param message     - The message to check.
      */
     isCmdIn(commandName: string, message: string) {
-        return message.split(' ', 1)[0] === commandName
+        return this.has(commandName) && message.split(' ', 1)[0] === commandName
     }
 
     /**
